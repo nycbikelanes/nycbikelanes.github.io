@@ -1,0 +1,97 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f8f8;
+  padding: 0 50px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h1 {
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+}
+
+p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pledge-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.topic {
+  font-weight: bold;
+  margin-bottom: 5px;
+  flex-basis: 150px;
+}
+
+.pledge {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+button:focus {
+  outline: none;
+}
+
+.fixed-h1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f00;
+  color: #fff;
+  padding: 20px;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+}
+
+input[type="text"],
+input[type="checkbox"] {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+input[type="checkbox"] + label {
+  margin-left: 5px;
+}
+
+input[type="submit"] {
+  width: auto;
+}
