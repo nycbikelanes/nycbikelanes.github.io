@@ -1,80 +1,77 @@
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background-color: #f8f8f8;
+  color: #f7f7f7;
+  background-color: #29282D;
   padding: 0 50px;
 }
 
-h1, h2, h3 {
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+.pmd {
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+.image-text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-text-container img {
+  height: auto;
+  max-width: 100%;
+  margin-right: 10px;
 }
 
 h1 {
-  background-color: #f00;
-  color: #fff;
-  padding: 20px;
   font-size: 4em;
   text-align: center;
-  text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
+  background-color: #29282D;
+  color: #fff;
+  padding: 20px;
 }
 
-p {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+
+h2, h3 {
+  text-align: center;
 }
 
-.pledge-container {
+form {
+  margin-top: 20px;
+}
+
+form div {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+  max-width: 500px;
+  margin: 0 auto 20px;
 }
 
-.topic {
+h3 {
   font-weight: bold;
   margin-bottom: 5px;
-  flex-basis: 150px;
 }
 
-.pledge {
-  margin-left: 20px;
-  flex-grow: 1;
+input[type="radio"] {
+  margin-right: 5px;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 3px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+
+.button-wrapper {
+  text-align: center;
 }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
 
 button:hover {
   background-color: #0069d9;
-}
-
-button:focus {
-  outline: none;
-}
-
-.fixed-h1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #f00;
-  color: #fff;
-  padding: 20px;
-  font-size: 4em;
-  text-align: center;
-  text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 1px 1px 0px #000;
 }
 
 input[type="text"],
@@ -84,14 +81,11 @@ input[type="checkbox"] {
   border: 1px solid #ccc;
   border-radius: 3px;
   font-size: 16px;
-  width: 100%;
-  max-width: 400px;
+  max-width: 500px; 
+  box-sizing: border-box; 
 }
 
-input[type="checkbox"] + label {
-  margin-left: 5px;
-}
 
-input[type="submit"] {
-  width: auto;
+form label {
+  word-wrap: break-word;
 }
