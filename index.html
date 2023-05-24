@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Politcize My Death</title>
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <title>Politcize My Death</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main h1 -->
+    <div class="image-text-container">
+      <img src="header.png" alt="Capital Building">
+      <h1>Politicize My Death</h1>
+    </div>
+    <div class="pmd">
 
-  </head>
-  <body>
     <div>
-          <!-- Main h1 -->
-    <h1>Politicize My Death</h1>
+      <p>Politicize My Death is a platform for those who want their preventable death to be used to advocate for change. We understand that when someone is killed by a motorist, dies from gun violence, or lack of access to safe abortions, it's not just a personal tragedy – it's also a failure of society to protect its people.</p>
+      <p>Unfortunately, some people may argue that using a person's death to promote change is inappropriate or disrespectful to the deceased. At Politicize My Death, we believe that many people who die from preventable causes would want their death to have meaning, to prevent others from experiencing the same fate.</p>
+      <p>That's why we invite you to take the pledge and let everyone know that it's okay to use your story if you die from a preventable cause. By taking this pledge, you can help others understand the importance of promoting change and advocating for a safer society.</p>
+      <p>We believe that your death should not be in vain, and that your story can inspire meaningful change. So join us in pledging to make a difference, even in death.</p>
+    </div>
 
-<p>Politicize My Death is a platform for those who want their preventable death to be used to advocate for change. We understand that when someone is killed by a motorist, dies from gun violence, or lack of access to safe abortions, it's not just a personal tragedy – it's also a failure of society to protect its people.</p>
-<p>Unfortunately, some people may argue that using a person's death to promote change is inappropriate or disrespectful to the deceased. At Politicize My Death, we believe that many people who die from preventable causes would want their death to have meaning, to prevent others from experiencing the same fate.</p>
-<p>That's why we invite you to take the pledge and let everyone know that it's okay to use your story if you die from a preventable cause. By taking this pledge, you can help others understand the importance of promoting change and advocating for a safer society.</p>
-<p>We believe that your death should not be in vain, and that your story can inspire meaningful change. So join us in pledging to make a difference, even in death.</p>
-
+    <div>
       <h2>Take the Pledge</h2>
       <p>Join the movement to end preventable deaths from gun violence, traffic accidents, and abortion bans. By signing this pledge, you're giving us permission to use your name and death to push for political change. Let's make every life count.</p>
       <form>
-        <h3>Traffic Violence:</h3>
-        <p>
-          <input type="radio" name="pledge" value="traffic-violence" id="traffic-violence">
-          <label for="traffic-violence">I pledge to advocate for a society that prioritizes the safety of all road users, even in death. I grant all transportation advocacy agencies explicit permission to use my story and death as a means to fight for safer streets, stricter regulations, and improved road safety measures. #PoliticizeMyDeath</label>
-        </p>
-      
-        <h3>Gun Violence:</h3>
-        <p>
-          <input type="radio" name="pledge" value="gun-violence" id="gun-violence">
-          <label for="gun-violence">I pledge to advocate for a society that addresses the root causes of gun violence, even in death. I grant all gun violence prevention advocacy agencies permission to use my death as a powerful tool in the fight for stronger gun control measures, comprehensive background checks, and the promotion of safer communities. #PoliticizeMyDeath</label>
-        </p>
-      
-        <h3>Lack of Access to Safe Abortions:</h3>
-        <p>
-          <input type="radio" name="pledge" value="abortion" id="abortion">
-          <label for="abortion">I pledge to advocate for reproductive rights and accessible healthcare, even in death. I grant all reproductive justice advocacy agencies explicit permission to use my story and death to fight against the lack of access to safe abortions, supporting initiatives that ensure every individual has the right to make informed choices about their reproductive health. #PoliticizeMyDeath</label>
-        </p>
+        <div>
+          <h3>Traffic Violence:</h3>
+          <div>
+            <input type="radio" name="pledge" value="traffic-violence" id="traffic-violence">
+            <label for="traffic-violence">I pledge to advocate for a safer streets for all road users, even in death. I grant transportation advocacy agencies explicit permission to use my death to fight for protected bike lanes, streets that prioritize people, and automated traffic enforcement. #PoliticizeMyDeath</label>
+          </div>
+        </div>
         
-        <input type="submit" value="Submit">
-        <button type="button" id="tweet-pledge-btn">Tweet Your Pledge</button>
+        <div>
+          <h3>Gun Violence:</h3>
+          <div>
+            <input type="radio" name="pledge" value="gun-violence" id="gun-violence">
+            <label for="gun-violence">I pledge to advocate for a society addressing root causes of gun violence. I grant gun violence prevention agencies permission to use my death as a powerful tool for stronger gun control, background checks, and safer communities. #PoliticizeMyDeath</label>
+          </div>
+        </div>
+        
+        <div>
+          <h3>Lack of Access to Safe Abortions:</h3>
+          <div>
+            <input type="radio" name="pledge" value="abortion" id="abortion">
+            <label for="abortion">
+              I pledge to advocate for reproductive rights and accessible healthcare, even in death. I grant all reproductive justice agencies explicit permission to use my death to fight for safe abortions and informed reproductive choices. #PoliticizeMyDeath #ReproductiveJustice</label>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button type="button" id="tweet-pledge-btn">Tweet Your Pledge</button>
+        </div>        
       </form>
-      
-    <script>
-      // get the tweet pledge button
-      const tweetPledgeBtn = document.getElementById('tweet-pledge-btn');
+    </div>
 
-      // add click event listener to the tweet pledge button
-      tweetPledgeBtn.addEventListener('click', () => {
-        // get the name input value
-        const name = document.getElementById('name').value;
+  <script>
+// Get the tweet pledge button
+const tweetPledgeBtn = document.getElementById('tweet-pledge-btn');
 
-        // get the checkboxes that are checked
-        const checkboxes = document.querySelectorAll('input[name="cause"]:checked');
+// Add click event listener to the tweet pledge button
+tweetPledgeBtn.addEventListener('click', () => {
+  // Get the selected radio button value
+  const selectedRadio = document.querySelector('input[name="pledge"]:checked');
 
-        // create the pledge text
-// create the pledge text
-let pledgeText = `If I die from `;
-for (let i = 0; i < checkboxes.length; i++) {
-  pledgeText += `${checkboxes[i].value}`;
-  if (i !== checkboxes.length - 1) {
-    pledgeText += ', or ';
+  // Check if a radio button is selected
+  if (selectedRadio) {
+    // Extract the pledge text from the selected radio button's label
+    const pledgeText = selectedRadio.nextElementSibling.textContent;
+
+    // Create the tweet URL
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(pledgeText)}`;
+
+    // Open the tweet window
+    window.open(tweetUrl);
   } else {
-    pledgeText += ', ';
+    // Display an error message if no radio button is selected
+    alert('Please select a pledge option.');
   }
-}
+});
 
-        // create the tweet URL
-        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${name} pledges: ${pledgeText}`)}`;
-
-        window.open(tweetUrl);
-      });
-    </script>
-  </body>
+  </script>
+</body>
 </html>
