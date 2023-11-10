@@ -1,84 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Politcize My Death</title>
-  <link rel="stylesheet" href="style.css?v=BEA1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Adams Arrest Status</title>
 </head>
 <body>
-    <!-- Main h1 -->
-    <div class="image-text-container">
-      <img src="header.png" alt="Capital Building">
-      <h1>Politicize My Death</h1>
-    </div>
-    <div class="pmd">
 
     <div>
-      <p>Politicize My Death is a platform for those who want their preventable death to be used to advocate for change. We understand that when someone is killed by a motorist, dies from gun violence, or lack of access to safe abortions, it's not just a personal tragedy – it's also a failure of society to protect its people.</p>
-      <p>Unfortunately, some people may argue that using a person's death to promote change is inappropriate or disrespectful to the deceased. At Politicize My Death, we believe that many people who die from preventable causes would want their death to have meaning, to prevent others from experiencing the same fate.</p>
-      <p>That's why we invite you to take the pledge and let everyone know that it's okay to use your story if you die from a preventable cause. By taking this pledge, you can help others understand the importance of promoting change and advocating for a safer society.</p>
-      <p>We believe that your death should not be in vain, and that your story can inspire meaningful change. So join us in pledging to make a difference, even in death.</p>
+        <h1 style="font-size: 2em; font-weight: bold;">
+            ERIC ADAMS HAS NOT BEEN ARRESTED, CHECK BACK SOON.
+        </h1>
     </div>
 
     <div>
-      <h2>Take the Pledge</h2>
-      <p>Join the movement to end preventable deaths from gun violence, traffic accidents, and abortion bans. By signing this pledge, you're giving us permission to use your name and death to push for political change. Let's make every life count.</p>
-      <form>
-        <div>
-          <h3>Traffic Violence:</h3>
-          <div>
-            <input type="radio" name="pledge" value="traffic-violence" id="traffic-violence">
-            <label for="traffic-violence">I pledge to advocate for a safer streets for all road users, even in death. I grant transportation advocacy agencies explicit permission to use my death to fight for protected bike lanes, streets that prioritize people, and automated traffic enforcement. #PoliticizeMyDeath</label>
-          </div>
-        </div>
-        
-        <div>
-          <h3>Gun Violence:</h3>
-          <div>
-            <input type="radio" name="pledge" value="gun-violence" id="gun-violence">
-            <label for="gun-violence">I pledge to advocate for a society addressing root causes of gun violence. I grant gun violence prevention agencies permission to use my death as a powerful tool for stronger gun control, background checks, and safer communities. #PoliticizeMyDeath</label>
-          </div>
-        </div>
-        
-        <div>
-          <h3>Lack of Access to Safe Abortions:</h3>
-          <div>
-            <input type="radio" name="pledge" value="abortion" id="abortion">
-            <label for="abortion">
-              I pledge to advocate for reproductive rights and accessible healthcare, even in death. I grant all reproductive justice agencies explicit permission to use my death to fight for safe abortions and informed reproductive choices. #PoliticizeMyDeath #ReproductiveJustice</label>
-          </div>
-        </div>
-        <div class="button-wrapper">
-          <button type="button" id="tweet-pledge-btn">Tweet Your Pledge</button>
-        </div>        
-      </form>
+        <button onclick="tweetStatus()">Tweet</button>
     </div>
 
-  <script>
-// Get the tweet pledge button
-const tweetPledgeBtn = document.getElementById('tweet-pledge-btn');
+    <script>
+        function tweetStatus() {
+            // You can customize the tweet text and URL as needed
+            var tweetText = "I just checked if Eric Adams has been arrested. hasericadamsbeenarrested.site";
+            var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+            window.open(tweetUrl, "_blank");
+        }
+    </script>
 
-// Add click event listener to the tweet pledge button
-tweetPledgeBtn.addEventListener('click', () => {
-  // Get the selected radio button value
-  const selectedRadio = document.querySelector('input[name="pledge"]:checked');
-
-  // Check if a radio button is selected
-  if (selectedRadio) {
-    // Extract the pledge text from the selected radio button's label
-    const pledgeText = selectedRadio.nextElementSibling.textContent;
-
-    // Create the tweet URL
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(pledgeText)}`;
-
-    // Open the tweet window
-    window.open(tweetUrl);
-  } else {
-    // Display an error message if no radio button is selected
-    alert('Please select a pledge option.');
-  }
-});
-
-  </script>
 </body>
 </html>
