@@ -1,0 +1,88 @@
+body {
+    font-family: monospace;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+h1 span {
+    color: #008000; /* Green color for "Not Arrested" */
+}
+
+button {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.update-section, .out-of-date-section, .adams-news-section {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.update, .column {
+    margin-bottom: 20px;
+}
+
+.news-links, .adams-news-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.news-links a, .adams-news-links a {
+    text-decoration: underline;
+    color: #000;
+    display: block;
+}
+
+p {
+    line-height: 1.8;
+    color: #444;
+}
+
+strong {
+    color: #e8491d;
+}
+
+img {
+    width: 20vw;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.out-of-date-section {
+    margin-top: 20px;
+}
+
+/* Add more styles as needed */
