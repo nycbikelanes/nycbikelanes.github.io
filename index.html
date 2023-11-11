@@ -5,12 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Adams Arrest Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        h1 span {
+            color: #008000; /* Green color for "Not Arrested" */
+        }
+
+        button {
+            background-color: #e8491d;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .update-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .update {
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #444;
+        }
+
+        strong {
+            color: #e8491d;
+        }
+
+        img {
+            width: 20vw; /* Set the width to 20% of the viewport width */
+            max-width: 100%; /* Make sure the image doesn't exceed its natural size */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Add some space below the image */
+            display: block; /* Center the image */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .out-of-date-section {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <div>
-        <h1 style="font-size: 2em; font-weight: bold;">
-            ERIC ADAMS HAS NOT BEEN ARRESTED, CHECK BACK SOON.
+        <img src="ericinprison.jpg" alt="Eric in Prison">
+        <h1>
+            ERIC ADAMS STATUS: <span>NOT ARRESTED</span>
         </h1>
     </div>
 
@@ -18,10 +91,32 @@
         <button onclick="tweetStatus()">Tweet</button>
     </div>
 
+    <div class="update-section">
+        <h2>Updates:</h2>
+        <div class="update">
+            <p><strong>11/11/2023:</strong> No change in Eric Adams' arrest status. Continuously monitoring news sources for updates.</p>
+        </div>
+        <div class="update">
+            <p><strong>11/10/2023:</strong> Confirmed that Eric Adams has not been arrested. Checked news websites for verification. <br>
+            Update: The FBI seized and made a copy of Eric Adams's iPhone. This is the first time a 3-letter agency has cloned a New York City Mayor's phone.</p>
+        </div>
+    </div>
+
+    <div class="out-of-date-section">
+        <h2>Out of Date?</h2>
+        <p>It's possible that this information is out of date. Help us stay current!</p>
+        <button onclick="tweetOutOfDate()">Tweet: Website is Out of Date</button>
+    </div>
+
     <script>
         function tweetStatus() {
-            // You can customize the tweet text and URL as needed
             var tweetText = "I just checked if Eric Adams has been arrested. hasericadamsbeenarrested.site";
+            var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
+            window.open(tweetUrl, "_blank");
+        }
+
+        function tweetOutOfDate() {
+            var tweetText = "Hey @nycbikelanes your website is out of date, Eric Adams has been arrested";
             var tweetUrl = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(tweetText);
             window.open(tweetUrl, "_blank");
         }
