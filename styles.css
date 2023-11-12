@@ -57,9 +57,12 @@ button {
 }
 
 .news-links a, .adams-news-links a {
+    display: block;
+}
+
+a {
     text-decoration: underline;
     color: #000;
-    display: block;
 }
 
 p {
@@ -84,5 +87,3 @@ img {
 .out-of-date-section {
     margin-top: 20px;
 }
-
-/* Add more styles as needed */
