@@ -7,6 +7,12 @@ body {
     padding: 20px;
 }
 
+.update p {
+    max-width: 70%;
+    margin: 0 auto; /* Center the container */
+    text-align: left; /* Left-align the text within the container */
+}
+
 .container {
     margin-bottom: 20px;
 }
@@ -57,6 +63,7 @@ button {
 }
 
 .news-links a, .adams-news-links a {
+    text-decoration: underline;
     display: block;
 }
 
@@ -68,6 +75,8 @@ a {
 p {
     line-height: 1.8;
     color: #444;
+    text-align: center;
+
 }
 
 strong {
@@ -87,3 +96,5 @@ img {
 .out-of-date-section {
     margin-top: 20px;
 }
+
+/* Add more styles as needed */
